@@ -22,7 +22,10 @@ RUN adduser --disabled-password \
 WORKDIR ${HOME}
 
 # install dependencies
-COPY . .
+COPY pyproject.toml .
+COPY poetry.lock .
+RUN git clone --recursive https://github.com/tradingstrategy-ai/trade-executor deps/trade-executor
+# TODO: we can hook trade-executor version later here
 RUN poetry config virtualenvs.create false && \
     poetry install --no-dev --no-interaction --no-ansi
 
