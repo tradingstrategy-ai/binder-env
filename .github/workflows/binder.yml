@@ -4,11 +4,6 @@ on:
     branches: [ master ]
     tags: [ v* ]
   workflow_dispatch:
-    inputs: 
-      random:
-        description: 'Random input'
-        required: false 
-        type: boolean
 
 jobs:
   create-mybinder-cache:
