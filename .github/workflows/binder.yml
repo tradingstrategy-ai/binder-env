@@ -1,5 +1,10 @@
 name: Binder
-on: [push]
+on:
+  push:
+    branches: [ master ]
+    tags: [ v* ]
+  workflow_dispatch:
+    inputs: []
 
 jobs:
   create-mybinder-cache:
