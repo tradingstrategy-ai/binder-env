@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.10-slim
 
 # install poetry
 RUN apt-get update && \
@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get install curl -y && \
     apt-get install git -y && \
     pip install --no-cache --upgrade pip && \
-    curl -sSL https://install.python-poetry.org | python - --version 1.1.13
+    curl -sSL https://install.python-poetry.org | python - --version 1.2.1
 
 # create user with a home directory
 ENV NB_USER=jovyan
