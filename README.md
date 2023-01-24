@@ -14,7 +14,7 @@ This environemt is mainly used for [Trading Strategy documentation](https://trad
 To build the Docker image from the scratch: 
 
 ```shell
-git submodule update --init --recursive
+git clone --recursive https://github.com/tradingstrategy-ai/trade-executor deps/trade-executor
 poetry shell
 poetry install
 docker build -t trading-strategy-binder-env:latest .
