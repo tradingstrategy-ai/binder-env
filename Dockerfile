@@ -23,7 +23,6 @@ WORKDIR ${HOME}
 
 # install dependencies
 COPY pyproject.toml .
-COPY poetry.lock .
 RUN git clone --recursive https://github.com/tradingstrategy-ai/trade-executor deps/trade-executor
 RUN poetry config virtualenvs.create false && \
     poetry install --only main --no-interaction --no-ansi
